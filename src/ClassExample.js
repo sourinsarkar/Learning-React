@@ -6,7 +6,9 @@ class ClassExample extends Component {
         super(props)
 
         this.state = { latitude: null, longitude: null, errorMessage: '' }
+    }
 
+    componentDidMount() {
         window.navigator.geolocation.getCurrentPosition(
             (position) => {
                 this.setState({ latitude: position.coords.latitude })
@@ -17,7 +19,11 @@ class ClassExample extends Component {
             (error) => {
                 this.setState({ errorMessage: error.message })
             }
-        )
+        );
+    }
+
+    componentDidUpdate() {
+        console.log('componentDidUpdate');
     }
 
     render() {
