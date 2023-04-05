@@ -1,14 +1,15 @@
 import React from 'react';
-import SingleComment from './SingleComment';
-import DP1 from './image/p1face.png';
-import DP2 from './image/p2face.png';
-import DP3 from './image/p3face.png';
-import UserCard from './UserCard';
+// import SingleComment from './SingleComment';
+// import DP1 from './image/p1face.png';
+// import DP2 from './image/p2face.png';
+// import DP3 from './image/p3face.png';
+// import UserCard from './UserCard';
+import ClassExample from './ClassExample';
 
 function App() {
     return (
         <div>
-            <div className="ui comments">
+            {/* <div className="ui comments">
                 <UserCard>
                     <div>
                         Hello my name is Sourin, I live in India.
@@ -34,7 +35,8 @@ function App() {
                     text="Hello dude"
                     picture={DP3}
                 />
-            </div>
+            </div> */}
+            <ClassExample />
         </div>
     )
 }
