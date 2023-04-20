@@ -4,7 +4,7 @@ import React from 'react';
 // import DP2 from './image/p2face.png';
 // import DP3 from './image/p3face.png';
 // import UserCard from './UserCard';
-import ClassExample from './ClassExample';
+import ClassExample from './Components/ClassExample';
 
 function App() {
     return (

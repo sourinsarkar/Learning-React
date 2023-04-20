@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
+import HemisphereDisplay from './HemisphereDisplay';
 
 class ClassExample extends Component {
 
-    constructor(props) {
-        super(props)
+    // Initializing STATE using CONSTRUCTOR
 
-        this.state = { latitude: null, longitude: null, errorMessage: '' }
-    }
+    // constructor(props) {
+    //     super(props)
+
+    //     this.state = { latitude: null, longitude: null, errorMessage: '' }
+    // }
+
+    // Initializing STATE using "state" function
+
+    state = {latitude: null, errorMessage: ''};
+
 
     componentDidMount() {
         window.navigator.geolocation.getCurrentPosition(
@@ -22,13 +30,9 @@ class ClassExample extends Component {
         );
     }
 
-    componentDidUpdate() {
-        console.log('componentDidUpdate');
-    }
-
     render() {
         if (this.state.latitude && !this.state.errorMessage) {
-            return <div>{this.state.latitude}</div>
+            return <div><HemisphereDisplay latitude={this.state.latitude} /></div>
         }
         if (!this.state.latitude && this.state.errorMessage) {
             return <div>{this.state.errorMessage}</div>
